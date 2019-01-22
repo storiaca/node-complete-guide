@@ -34,7 +34,8 @@ const server = http.createServer((req, res) => {
 
     req.on('end', () => {
       const parseBody = Buffer.concat(body).toString();
-      console.log(parseBody);
+      const name = parseBody.split('=')[1];
+      console.log(name);
     })
     res.statusCode = 302;
     res.setHeader('Location', '/');
