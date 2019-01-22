@@ -32,8 +32,10 @@ const server = http.createServer((req, res) => {
       body.push(chunk);
     });
 
-    
-    req.on('')
+    req.on('end', () => {
+      const parseBody = Buffer.concat(body).toString();
+      console.log(parseBody);
+    })
     res.statusCode = 302;
     res.setHeader('Location', '/');
     return res.end();
