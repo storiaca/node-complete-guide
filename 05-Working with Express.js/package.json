@@ -1,0 +1,26 @@
+{
+  "name": "working-with-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/storiaca/node-complete-guide.git"
+  },
+  "author": "Aleksandar Ristic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/storiaca/node-complete-guide/issues"
+  },
+  "homepage": "https://github.com/storiaca/node-complete-guide#readme",
+  "devDependencies": {
+    "nodemon": "1.18.9"
+  },
+  "dependencies": {
+    "express": "4.16.4"
+  }
+}
