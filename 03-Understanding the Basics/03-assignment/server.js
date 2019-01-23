@@ -39,7 +39,7 @@ const server = http.createServer((req, res) => {
     })
     res.statusCode = 302;
     res.setHeader('Location', '/');
-    return res.end();
+    res.end();
   }
   
   //console.log(req);
