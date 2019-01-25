@@ -8,11 +8,11 @@ const app = express();
 
 app.use(bodyParser.urlencoded({extended: false}));
 
-app.use(adminRoutes);
+app.use('/admin', adminRoutes);
 app.use(shopRoutes);
 
 app.use((req, res, next) => {
-  res.send('<h2>Page not found</h2>');
+  res.status(404).send('<h2>Page not found</h2>');
 });
 
 app.listen(3000);
