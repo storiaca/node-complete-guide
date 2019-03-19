@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use((req, res, next) => {
   User.findById('5c90db2b0dcd9f0419a5eae2')
     .then(user => {
-      req.user = new User(user.name, user.email, user.cart, user._id);
+      req.user = user;
       next();
     })
     .catch(err => console.log(err));
@@ -36,7 +36,7 @@ mongoose
   .connect('mongodb+srv://stori:nodekurs19@cluster0-vy6oe.mongodb.net/shop?retryWrites=true', { useNewUrlParser: true })
   .then(result => {
     User.findOne().then(user => {
-      if(!user) {
+      if(!user) { 
         const user = new User({
           name: 'Max',
           email: 'max@test.com',
