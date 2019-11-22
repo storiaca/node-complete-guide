@@ -12,7 +12,7 @@ import SinglePostPage from "./pages/Feed/SinglePost/SinglePost";
 import LoginPage from "./pages/Auth/Login";
 import SignupPage from "./pages/Auth/Signup";
 import "./App.css";
-import auth from "./pages/Auth/Auth";
+//import auth from "./pages/Auth/Auth";
 
 class App extends Component {
   state = {
@@ -104,7 +104,7 @@ class App extends Component {
     fetch("http://localhost:8080/auth/signup", {
       method: "PUT",
       headers: {
-        "Content-Type": "applicaton/json"
+        "Content-Type": "application/json"
       },
       body: JSON.stringify({
         email: authData.signupForm.email.value,
