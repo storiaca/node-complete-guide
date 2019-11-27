@@ -61,7 +61,7 @@ exports.createPost = (req, res, next) => {
     })
     .then(user => {
       creator = user;
-      user.post.push(post);
+      user.posts.push(post);
       return user.save();
     })
     .then(result => {
