@@ -83,7 +83,7 @@ class Feed extends Component {
   statusUpdateHandler = event => {
     event.preventDefault();
     fetch("http://localhost:8080/auth/status", {
-      methods: "PATCH",
+      method: "PATCH",
       headers: {
         Authorization: "Bearer " + this.props.token,
         "Content-Type": "application/json"
